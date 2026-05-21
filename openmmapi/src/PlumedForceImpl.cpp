@@ -39,7 +39,7 @@ using namespace PlumedPlugin;
 using namespace OpenMM;
 using namespace std;
 
-PlumedForceImpl::PlumedForceImpl(const PlumedForce& owner) : CustomCPPForceImpl(owner), owner(owner), hasInitialized(false) {
+PlumedForceImpl::PlumedForceImpl(const PlumedForce& owner) : CustomCPPForceImpl(owner), owner(owner), hasInitialized(false), lastStepIndex(-1) {
 }
 
 PlumedForceImpl::~PlumedForceImpl() {
